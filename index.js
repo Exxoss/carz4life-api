@@ -6,6 +6,9 @@ var Bidding = require('./auction/bidding')
 var Process = require('./auction/process')
 var db = require('./database/database')
 
+var port = (process.env.PORT || 5000)
+
+
 db.observeAuctions(Process)
 
 
@@ -26,4 +29,4 @@ app.post('/bid', function (req, res) {
 })
 
 console.log("API running on port ", port)
-app.listen((process.env.PORT || 5000))
+app.listen(port)
