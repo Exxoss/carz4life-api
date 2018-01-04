@@ -1,0 +1,25 @@
+{
+  "name": "mobile-poc-livebidding-api",
+  "version": "1.0.0",
+  "description": "API responsible of the business logic implementation",
+  "main": "index.js",
+  "dependencies": {
+    "easytimer": "^1.1.1",
+    "express": "^4.16.2",
+    "firebase": "^4.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo-ch/mobile-poc-livebidding-api.git"
+  },
+  "author": "Arthur Quemard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo-ch/mobile-poc-livebidding-api/issues"
+  },
+  "homepage": "https://github.com/ricardo-ch/mobile-poc-livebidding-api#readme"
+}
