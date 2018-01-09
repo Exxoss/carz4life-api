@@ -47,6 +47,20 @@ exports.updateBidHistory = function(auction_id, user_id) {
     console.log('User id : ', user_id, ' has been added to the bid history of the auction with ID : ', auction_id)
   }
 }
+
+exports.updateEndAuctionDate = function(auction_id) {
+  var dateNow = new Date(), updatedDate = new Date(dateNow)
+  updatedDate.setMinutes(dateNow.getMinutes() + 15)
+
+  var updatedDateIsoString = updatedDate.toISOString()
+
+  var updates = {};
+  updates['/auctions/' + auction_id + '/end_auction_date'] = updatedDateIsoString
+  firebase.database().ref().update(updates)
+
+  console.log('Auction with ID : ', auction_id, ' has a new closing date : ', updatedDateIsoString)
+}
+
 exports.setAuctionStatus = function(auction_id, status) {
   var updates = {};
   updates['/auctions/' + auction_id + '/auction_status'] = status
